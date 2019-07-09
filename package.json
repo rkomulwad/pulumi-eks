@@ -1,0 +1,51 @@
+{
+  "name": "infra-eks",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "nyc mocha -r ts-node/register --reporter spec test/**/*.ts"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^0.18.11",
+    "@pulumi/awsx": "^0.18.4",
+    "@pulumi/eks": "^0.18.6",
+    "@pulumi/kubernetes": "^0.23.1",
+    "@pulumi/pulumi": "^0.17.14",
+    "@types/node": "^11.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/jest": "^24.0.13",
+    "@types/js-yaml": "^3.12.1",
+    "@types/mocha": "^5.2.7",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
+    "@types/sinon": "^7.0.13",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.spec.ts",
+      "**.js",
+      "coverage/**",
+      "tests/**"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "all": true
+  }
+}

@@ -1,0 +1,14 @@
+name: infra-eks
+description: EKS Cluster & All Runtime Elements
+runtime: nodejs
+template:
+  config:
+    aws:assumeRole:
+      description: The role to assume
+      default: '{"roleArn": "arn:aws:iam::xxxx:role/sandbox-developer"}'
+    aws:profile:
+      description: The profile to use for execution
+      default: test-iam
+    aws:region:
+      description: The AWS region to deploy into
+      default: us-east-1

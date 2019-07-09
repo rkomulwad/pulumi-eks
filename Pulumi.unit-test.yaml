@@ -1,0 +1,10 @@
+config:
+  aws:region: us-west-2
+  pulumi-eks:region: us-west-2
+  pulumi-eks:name: unit-test
+  pulumi-eks:instanceType: t2.large
+  pulumi-eks:k8s.desiredCapacity: 2
+  pulumi-eks:k8s.minSize: 2
+  pulumi-eks:k8s.maxSize: 4
+  pulumi-eks:k8s.cert: /etc/kubernetes/pki/ca.crt
+  pulumi-eks:k8.ca.rbac: true

@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+kubeconfig
+package-lock.json
+*.exe
+.nyc_output/
+coverage/
+.idea/
+*.iml
+bin/
