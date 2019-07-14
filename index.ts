@@ -2,6 +2,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as awsx from "@pulumi/awsx";
 import * as eks from "@pulumi/eks";
 import * as k8s from "@pulumi/kubernetes";
+import { runTests } from "./test";
 
 const name = "helloworld";
 
@@ -16,3 +17,6 @@ export const cluster = new eks.Cluster(name, {
         storageClasses: "gp2",
         deployDashboard: false,
     });
+
+// Finally, run the unit tests to check our deployment (during previews and updates).
+runTests();
