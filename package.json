@@ -5,12 +5,12 @@
     "test": "nyc mocha -r ts-node/register --reporter spec test/**/*.ts"
   },
   "dependencies": {
-    "@pulumi/aws": "^0.18.11",
-    "@pulumi/awsx": "^0.18.4",
-    "@pulumi/eks": "^0.18.6",
-    "@pulumi/kubernetes": "^0.23.1",
-    "@pulumi/pulumi": "^0.17.14",
-    "@types/node": "^11.3.2"
+    "@pulumi/aws": "1.0.0",
+    "@pulumi/awsx": "0.18.10",
+    "@pulumi/eks": "0.18.14",
+    "@pulumi/kubernetes": "1.0.0",
+    "@pulumi/pulumi": "1.0.0",
+    "@types/node": "12.7.2"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
